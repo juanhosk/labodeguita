@@ -8,13 +8,13 @@ import Vuetify from 'vuetify'
 
 Vue.use(Vuetify, {
   theme: {
-    'primary': '#29B6F6',
-    'secondary': '#66BB6A',
-    'accent': '#F44336',
+    'primary': '#dc3250',
+    'secondary': '#fad296',
+    'accent': '#e5697f',
     'error': '#F44336',
     'warning': '#ffeb3b',
-    'info': '#42A5F5',
+    'info': '#fbe2bc',
     'success': '#81C784',
-    'neutral': '#f5f5f5'
+    'neutral': '#fffaf0'
   }
 })

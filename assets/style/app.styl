@@ -1,0 +1,9 @@
+// Import Vuetify styling
+{{#alacarte}}
+@require '~vuetify/src/stylus/app.styl'
+{{else}}
+@require '~vuetify/src/stylus/main.styl'
+{{/alacarte}}
+
+.page
+  @extend .fade-transition

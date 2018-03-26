@@ -8,14 +8,6 @@
       class="white--text"
       >
         <img :src="logo" alt="logo" height="200">
-        <v-btn
-          class="blue lighten-2 mt-5"
-          dark
-          large
-          href="/pre-made-themes"
-        >
-          Get Started
-        </v-btn>
       </v-layout>
     </v-parallax>
   </section>

@@ -1,8 +1,8 @@
 <template>
-  <v-content>
+  <div>
     <section-image-principal></section-image-principal>
     <section-caracteristics></section-caracteristics>
-  </v-content>
+  </div>
 </template>
 <script>
   import { SectionImagePrincipal, SectionCaracteristics } from '~/components/Main'

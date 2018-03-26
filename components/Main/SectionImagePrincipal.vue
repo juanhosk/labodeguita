@@ -7,8 +7,7 @@
       justify-center
       class="white--text"
       >
-        <h1 class="white--text mb-2 display-1 text-xs-center">Parallax Template</h1>
-        <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div>
+        <img :src="logo" alt="logo" height="200">
         <v-btn
           class="blue lighten-2 mt-5"
           dark
@@ -25,7 +24,8 @@
   export default {
     data () {
       return {
-        portada: require('~/assets/hero.jpeg')
+        portada: require('~/assets/entrada2.jpg'),
+        logo: require('~/static/logos/logo.png')
       }
     }
   }

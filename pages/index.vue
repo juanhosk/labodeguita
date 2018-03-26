@@ -5,7 +5,7 @@
   </v-content>
 </template>
 <script>
-  import { SectionImagePrincipal, SectionCaracteristics } from '~/components/MainComponents'
+  import { SectionImagePrincipal, SectionCaracteristics } from '~/components/Main'
   export default {
     components: {
       SectionImagePrincipal,

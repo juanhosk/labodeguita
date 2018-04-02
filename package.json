@@ -5,7 +5,7 @@
   "author": "La Bodeguita",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

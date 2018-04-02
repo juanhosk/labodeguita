@@ -5,13 +5,14 @@
         <strong class="subheading">Siguenos en las redes!</strong>
         <v-spacer></v-spacer>
         <v-btn
-          v-for="icon in icons"
-          :key="icon"
+          v-for="(social, key) in socials"
+          :key="key"
+          :href="social.link"
+          target="_blank"
           icon
           dark
-          class="mx-3"
         >
-          <v-icon size="24px">{{ icon }}</v-icon>
+          <v-icon>{{ social.icon }}</v-icon>
         </v-btn>
       </v-card-title>
       <v-card-text class="grey lighten-3">
@@ -28,21 +29,6 @@
               v-text="child"
             />
           </v-flex>
-          <v-flex xs3 layout column>
-            <span class="body-2">CONTACTO</span>
-            <div>
-              28240 Hoyo de Manzanares, Madrid
-            </div>
-            <div>
-              Av de la Paloma Nº 10
-            </div>
-            <div>
-              info@example.com
-            </div>
-            <div>
-              918 56 57 88
-            </div>
-          </v-flex>
         </v-layout>
       </v-card-text>
       <v-card-actions class="grey lighten-2 justify-center">
@@ -54,19 +40,28 @@
 <script>
   export default {
     data: () => ({
-      icons: ['fab home', 'fab home', 'fab home', 'fab home', 'fab home'],
+      socials: [
+        {
+          link: 'https://www.facebook.com',
+          icon: 'fab fa-facebook-square'
+        },
+        {
+          link: 'https://www.instagram.com',
+          icon: 'fab fa-instagram'
+        },
+        {
+          link: 'https://goo.gl/maps/xYPebcj62yy',
+          icon: 'fab fa-google'
+        }
+      ],
       rows: [
         {
-          title: 'Company Name',
-          children: ['Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit']
+          title: 'Mapa del sitio',
+          children: ['Tu cuenta', 'Nuestros productos', 'Ayuda']
         },
         {
-          title: 'Products',
-          children: ['MDBootstrap', 'MDWordPress', 'BrandFlow', 'Bootstrap Angular']
-        },
-        {
-          title: 'Useful Links',
-          children: ['Your account', 'Become an Affiliate', 'Shipping Rates', 'Helper']
+          title: 'Contacto',
+          children: ['Av de la Paloma Nº 10', '28240 Hoyo de Manzanares, Madrid', 'labodeguita.ice@gmail.com', '91 856 57 88']
         }
       ]
     })

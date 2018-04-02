@@ -1,9 +1,11 @@
 <template>
   <v-footer height="auto">
     <v-card flat tile width="100%">
-      <v-card-title class="primary white--text">
-        <strong class="subheading">Siguenos en las redes!</strong>
-        <v-spacer></v-spacer>
+      <v-card-title class="primary white--text" :class="$device.isMobile ? 'd-flex' : ''">
+        <template v-if="!$device.isMobile">
+          <strong class="subheading">Siguenos en las redes!</strong>
+          <v-spacer></v-spacer>
+        </template>
         <v-btn
           v-for="(social, key) in socials"
           :key="key"
@@ -15,7 +17,7 @@
           <v-icon>{{ social.icon }}</v-icon>
         </v-btn>
       </v-card-title>
-      <v-card-text class="grey lighten-3">
+      <v-card-text class="grey lighten-3" v-if="!$device.isMobile">
         <v-layout>
           <v-flex
             v-for="(col, i) in rows"

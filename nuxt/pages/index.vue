@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section-image-principal></section-image-principal>
+    <section-image-principal v-if="!$device.isMobile"></section-image-principal>
     <section-caracteristics></section-caracteristics>
   </div>
 </template>

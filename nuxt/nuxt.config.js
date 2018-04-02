@@ -50,6 +50,9 @@ module.exports = {
       }
     }
   },
+  modules: [
+    'nuxt-device-detect',
+  ],
   /*
   ** Loads plugins into the app
   */

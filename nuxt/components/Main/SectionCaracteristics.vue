@@ -42,7 +42,7 @@
                     <div class="headline text-xs-center">Formulario de contacto</div>
                   </v-card-title>
                   <v-card-text>
-                    <v-form v-model="valid">
+                    <v-form v-model="valid" @click:submit.prevent="addMessage">
                       <v-text-field
                         label="Nombre"
                         v-model="name"
@@ -84,6 +84,11 @@
         v => !!v || 'Campo obligatorio'
       ],
       text: ''
-    })
+    }),
+    methods: {
+      addMessage () {
+        // let uri = 'http://localhost:4000/items/add'
+      }
+    }
   }
 </script>

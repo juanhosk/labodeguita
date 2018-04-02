@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt nuxt",
+    "server": "node server/index.js",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

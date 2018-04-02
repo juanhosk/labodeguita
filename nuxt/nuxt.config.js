@@ -1,7 +1,12 @@
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  modulesDir: '../node_modules',
+  /**
+   * Workspace config
+   */
+  // modulesDir: '../node_modules'
+  rootDir: './',
+  srcDir: 'nuxt',
   /*
   ** Head elements
   ** Adds Roboto font and Material Icons

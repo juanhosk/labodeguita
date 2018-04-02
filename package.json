@@ -1,8 +1,8 @@
 {
   "name": "labodeguita",
   "version": "0.0.1",
-  "description": "{{ description }}",
-  "author": "{{ author }}",
+  "description": "Web de la bodefuita",
+  "author": "La Bodeguita",
   "private": true,
   "scripts": {
     "dev": "nuxt",

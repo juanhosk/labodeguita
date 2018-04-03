@@ -1,8 +1,7 @@
 <template>
   <v-toolbar
     height="50px"
-    :app="$device.isMobile"
-    fixed flat
+    app fixed flat
     v-scroll="onScroll"
     :color="$device.isMobile ? 'primary' : offsetTop <= 100 ? 'transparent' : 'primary'"
   >
@@ -14,9 +13,9 @@
     <v-toolbar-items v-if="!$device.isMobile">
       <v-btn
         v-for="(link, key) in links" :key="key"
-        :nuxt="link.url" :color="link.color"
-        depressed light class="square"
-        :class="offsetTop <= 100 ? 'tbtn-hover' : ''"
+        nuxt :to="link.url" :color="link.color"
+        depressed light class="square t-btn"
+        :class="offsetTop <= 100 ? 't-btn--hover' : ''"
       >
        {{ link.text }}
       </v-btn>
@@ -29,19 +28,19 @@
       offsetTop: 0,
       links: [
         {
-          url: '',
+          url: 'users',
           color: 'primary',
           text: 'Tu cuenta'
         },
         {
           url: '',
           color: 'secondary',
-          text: 'Tu cuenta'
+          text: 'Pedidos'
         },
         {
           url: '',
           color: 'neutral',
-          text: 'Tu cuenta'
+          text: 'Contacto'
         }
       ]
     }),
@@ -62,7 +61,11 @@
     }
   }
 
-  .tbtn-hover:hover {
-    height: 70px;
+  .t-btn {
+    width: 110px;
+
+    &.t-btn--hover:hover {
+      height: 70px;
+    }
   }
 </style>

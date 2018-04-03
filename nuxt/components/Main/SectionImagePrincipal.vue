@@ -1,11 +1,11 @@
 <template>
-  <section>
+  <section style="margin-top: -50px;">
     <v-parallax :src="portada" height="500">
       <v-layout
       column
       align-center
       justify-center
-      class="white--text"
+      class="white--text noselect"
       >
         <img :src="logo" alt="logo" height="200">
       </v-layout>
@@ -22,4 +22,3 @@
     }
   }
 </script>
-

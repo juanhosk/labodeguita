@@ -33,7 +33,7 @@
           </v-flex>
         </v-layout>
       </v-card-text>
-      <v-card-actions class="grey lighten-2 justify-center">
+      <v-card-actions class="grey lighten-2 justify-center noselect">
         &copy;2018 — <strong>La Bodeguita</strong>
       </v-card-actions>
     </v-card>

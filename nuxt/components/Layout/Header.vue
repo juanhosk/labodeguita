@@ -1,5 +1,6 @@
 <template>
   <v-toolbar
+    height="50px"
     :app="$device.isMobile"
     fixed flat
     v-scroll="onScroll"
@@ -11,16 +12,38 @@
     </template>
     <v-spacer></v-spacer>
     <v-toolbar-items v-if="!$device.isMobile">
-      <v-btn flat>Link One</v-btn>
-      <v-btn flat>Link Two</v-btn>
-      <v-btn flat>Link Three</v-btn>
+      <v-btn
+        v-for="(link, key) in links" :key="key"
+        :nuxt="link.url" :color="link.color"
+        depressed light class="square"
+        :class="offsetTop <= 100 ? 'tbtn-hover' : ''"
+      >
+       {{ link.text }}
+      </v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
 <script>
   export default {
     data: () => ({
-      offsetTop: 0
+      offsetTop: 0,
+      links: [
+        {
+          url: '',
+          color: 'primary',
+          text: 'Tu cuenta'
+        },
+        {
+          url: '',
+          color: 'secondary',
+          text: 'Tu cuenta'
+        },
+        {
+          url: '',
+          color: 'neutral',
+          text: 'Tu cuenta'
+        }
+      ]
     }),
     methods: {
       onScroll (e) {
@@ -29,13 +52,17 @@
     }
   }
 </script>
-<style scoped>
+<style lang="scss" scoped>
   .logo-avatar {
     position: absolute;
     left: calc( 50% - 24px );
+
+    img {
+      width: 100px;
+    }
   }
 
-  .logo-avatar > img {
-    width: 100px;
+  .tbtn-hover:hover {
+    height: 70px;
   }
 </style>

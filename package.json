@@ -1,17 +1,19 @@
 {
   "name": "labodeguita",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "La Bodeguita de Hoyo",
   "author": "La Bodeguita",
   "private": true,
   "scripts": {
-    "dev": "nuxt nuxt",
-    "server": "node server/index.js",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "node server/app.js",
+    "build": "nuxt build nuxt",
+    "start": "cross-env NODE_ENV=production node server/app.js",
+    "generate": "nuxt generate nuxt"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
     "nodemailer": "^4.6.4",
     "nuxt": "^1.0.0",
     "nuxt-device-detect": "^1.1.1",
@@ -30,7 +32,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
-    "sass-resources-loader": "^1.3.3",    
+    "sass-resources-loader": "^1.3.3",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }

@@ -1,11 +1,14 @@
 const express = require('express')
 const { Nuxt, Builder } = require('nuxt')
 
-const app = express()
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 
-const messagesRoutes = require('./routes/Messages')
+const app = express()
+const api = require('./api/index')
+
+// routes
+app.use('/', api)
 
 // Import and set Nuxt.js options
 let config = require('../nuxt/nuxt.config.js')
@@ -20,11 +23,9 @@ if (config.dev) {
   builder.build()
 }
 
-// routes
-app.use('/messages', messagesRoutes)
-
 // Give nuxt middleware to express
 app.use(nuxt.render)
 
 // Start express server
 app.listen(port, host)
+console.log('Server listening on ' + host + ':' + port) // eslint-disable-line no-console

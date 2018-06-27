@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <v-card class="p-2 mb-1 square">
+  <section class="ma-4">
+    <v-card class="pa-2 mb-1 square">
       <h3>Mis Datos</h3>
     </v-card>
     <user-card></user-card>

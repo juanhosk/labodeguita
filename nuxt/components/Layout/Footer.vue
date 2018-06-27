@@ -29,7 +29,7 @@
               v-for="(child, i) in col.children"
               :key="i"
               v-text="child"
-            />
+            ></div>
           </v-flex>
         </v-layout>
       </v-card-text>

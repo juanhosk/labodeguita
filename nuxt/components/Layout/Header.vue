@@ -3,14 +3,10 @@
     height="50px"
     app fixed flat
     v-scroll="onScroll"
-    :color="$device.isMobile ? 'primary' : offsetTop <= 100 ? 'transparent' : 'primary'"
+    :color="offsetTop <= 100 ? 'transparent' : 'primary'"
   >
-    <template v-if="$device.isMobile">
-        <v-toolbar-side-icon dark></v-toolbar-side-icon>
-        <v-avatar class="logo-avatar"><img src="/logos/logo.svg"/></v-avatar>
-    </template>
     <v-spacer></v-spacer>
-    <v-toolbar-items v-if="!$device.isMobile">
+    <v-toolbar-items>
       <v-btn
         v-for="(link, key) in links" :key="key"
         nuxt :to="link.url" :color="link.color"
@@ -52,20 +48,20 @@
   }
 </script>
 <style lang="scss" scoped>
-  .logo-avatar {
-    position: absolute;
-    left: calc( 50% - 24px );
+.logo-avatar {
+  position: absolute;
+  left: calc(50% - 24px);
 
-    img {
-      width: 100px;
-    }
+  img {
+    width: 100px;
   }
+}
 
-  .t-btn {
-    width: 110px;
+.t-btn {
+  width: 110px;
 
-    &.t-btn--hover:hover {
-      height: 70px;
-    }
+  &.t-btn--hover:hover {
+    height: 70px;
   }
+}
 </style>

@@ -51,16 +51,16 @@
   }
 </script>
 <style lang="scss" scoped>
-  .custom-loader {
-    animation: loader 1s infinite;
-    display: flex;
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
+loader {
+  from {
+    transform: rotate(0);
   }
-  loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
+}
 </style>

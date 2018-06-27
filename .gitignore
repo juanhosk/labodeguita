@@ -16,3 +16,4 @@ package-lock.json
 # nuxt && vue things
 .nuxt
 dist/
+yarn.lock
